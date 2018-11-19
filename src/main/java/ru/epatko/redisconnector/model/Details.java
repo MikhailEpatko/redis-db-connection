@@ -1,4 +1,4 @@
-package ru.epatko.redislistener.model;
+package ru.epatko.redisconnector.model;
 
 import lombok.*;
 

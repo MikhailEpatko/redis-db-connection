@@ -1,6 +1,6 @@
-package ru.epatko.redislistener.repository;
+package ru.epatko.redisconnector.repository;
 
-import ru.epatko.redislistener.model.RedisPaymentData;
+import ru.epatko.redisconnector.model.RedisPaymentData;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

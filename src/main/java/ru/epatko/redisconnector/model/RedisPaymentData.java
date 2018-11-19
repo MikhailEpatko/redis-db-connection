@@ -1,4 +1,4 @@
-package ru.epatko.redislistener.model;
+package ru.epatko.redisconnector.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,5 +14,5 @@ public class RedisPaymentData {
 
     @Id
     private String requestId;
-    private ru.epatko.redislistener.model.Data data;
+    private ru.epatko.redisconnector.model.Data data;
 }

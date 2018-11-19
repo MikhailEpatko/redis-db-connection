@@ -1,4 +1,4 @@
-package ru.epatko.redislistener.config;
+package ru.epatko.redisconnector.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
