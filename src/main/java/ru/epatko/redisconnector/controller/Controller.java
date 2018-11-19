@@ -28,8 +28,7 @@ public class Controller {
 
     @GetMapping("/tmp/{requestId}")
     public String gettmp(@PathVariable String requestId) {
-        String s = service.gettmp(requestId);
-        return s;
+        return service.getLikeJson(requestId);
     }
 
     @GetMapping("/{requestId}")
@@ -45,7 +44,7 @@ public class Controller {
 
     @PostMapping("/tmp")
     public void saveTmp(@RequestBody RedisPaymentData paymentData) {
-        service.savetmp(paymentData);
+        service.saveLikeJson(paymentData);
     }
 
     @PutMapping

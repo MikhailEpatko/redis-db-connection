@@ -21,10 +21,8 @@ public class RedisService {
         this.redisTemplate = redisTemplate;
     }
 
-
     public RedisPaymentData create(RedisPaymentData paymentData) {
-        RedisPaymentData pd = paymentRepository.save(paymentData);
-        return  pd;
+        return paymentRepository.save(paymentData);
     }
 
     public RedisPaymentData read(String requestId) {
@@ -39,12 +37,12 @@ public class RedisService {
         return paymentRepository.save(newPaymentData);
     }
 
-    public String gettmp(String requestId) {
+    public String getLikeJson(String requestId) {
         ValueOperations<String, String> ops = redisTemplate.opsForValue();
         return ops.get(requestId);
     }
 
-    public void savetmp(RedisPaymentData paymentData) {
+    public void saveLikeJson(RedisPaymentData paymentData) {
         ValueOperations<String, String> ops = redisTemplate.opsForValue();
         ops.set(paymentData.getRequestId(), gson.toJson(paymentData.getData()));
     }
